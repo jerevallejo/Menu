@@ -1,0 +1,220 @@
+* {
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+}
+
+body {
+    background-color: #000;
+}
+
+figure {
+    line-height: 0
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%
+}
+
+.w-100 {
+    width: 100%
+}
+
+.floating-sticky {
+    position: fixed;
+    width: 64px;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 190;
+    text-align: center;
+}
+
+.floating-sticky .menu-list {
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 200;
+}
+
+.floating-sticky .menu-list .inner {
+    position: relative;
+}
+
+.floating-sticky .menu-list .btn-floating {
+    position: relative;
+    font-size: 0;
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(112, 184, 200, 1) 0%, rgba(134, 113, 222, 1) 100%);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.floating-sticky .menu-list .btn-floating span {
+    position: relative;
+    display: block;
+    height: 100%;
+    background: url('../img/Floating__plus.png');
+    background-size: cover;
+    transition: transform .35s;
+    font-size: 0;
+}
+
+.floating-sticky .menu-list .on .btn-floating {
+    border: 2px solid #fff;
+}
+
+.floating-sticky .menu-list .on .btn-floating span {
+    transform: rotate(135deg);
+}
+
+.floating-sticky .menu-list .inner,
+.floating-sticky .menu-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.floating-sticky .menu-list li {
+    position: relative;
+    opacity: 0;
+    margin-bottom: -64px;
+    transition: margin .5s, opacity .5s;
+}
+
+.floating-sticky .menu-list .on li {
+    opacity: 1;
+    margin-bottom: 12px;
+}
+
+.floating-sticky .menu-list li a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 64px;
+    overflow: hidden;
+    border-radius: 50%;
+    color: #fff;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius: 64px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 21px;
+    text-shadow: 1px 1px 1px #5a5a5a;
+    transition: width .35s;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.floating-sticky .menu-list li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.floating-sticky .menu-list li,
+.floating-sticky .menu-list li a,
+.floating-sticky .menu-list li a:before {
+    width: 64px;
+    height: 64px;
+    box-sizing: border-box;
+    background-size: 90%;
+    background-position: center center;
+}
+
+.floating-sticky .menu-list li a:hover {
+    width: 230px;
+}
+
+.floating-sticky .menu-list li.menuAr a {
+    padding: 0;
+}
+
+.floating-sticky .menu-list li.menuAr a:hover {
+    width: 64px;
+}
+
+.floating-sticky .menu-list li.menu04 {
+    margin-bottom: 8px;
+    opacity: 1;
+}
+
+.floating-sticky .menu-list li.menu01 a:before {
+    background-image: url('../img/btn-square-video-call-samsung.gif');
+}
+
+.floating-sticky .menu-list li a {
+    background: linear-gradient(180deg, rgba(112, 184, 200, 1) 0%, rgba(134, 113, 222, 1) 100%);
+}
+
+.floating-sticky .menu-list li.menu02 a:before {
+    background-image: url('../img/btn-square-chat-samsung.gif');
+}
+
+.floating-sticky .menu-list li.menu03 a:before {
+    background-image: url('../img/btn-square-whatsapp-samsung.gif');
+}
+
+.floating-sticky .menu-list li.menu04 a {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+}
+
+.floating-sticky .menu-list li.menu04:only-child {
+    margin: 0;
+}
+
+.floating-sticky .menu-list li.menu04 img {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    width: 50px;
+}
+
+@media (max-width:810px) {
+    .floating-sticky {
+        width: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .floating-sticky .menu-list {
+        margin-bottom: 0;
+    }
+    .floating-sticky .menu-list li {
+        margin-bottom: -55px;
+    }
+    .floating-sticky .menu-list .btn-floating,
+    .floating-sticky .menu-list li,
+    .floating-sticky .menu-list li a,
+    .floating-sticky .menu-list li a:before {
+        width: 55px;
+        height: 55px
+    }
+    .floating-sticky .menu-list li a {
+        padding-left: 55px;
+    }
+    .floating-sticky .menu-list li a:hover {
+        /*width: 55px;*/
+    }
+    .floating-sticky .menu-list li.menu04 img {
+        width: 42px;
+    }
+}
