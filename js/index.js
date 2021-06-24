@@ -16,11 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     document.body.appendChild(template);
     document.getElementById("to_open").addEventListener("click", floating_open);
-    document.getElementById("cliengoWidgetOpen").addEventListener("click", cliengoWidgetOpen);
-
-    function cliengoWidgetOpen() {
-        Cliengo.widgetClose();
-    }
 
     function floating_open() {
         var element = document.getElementById("floating_open");
