@@ -33,8 +33,8 @@ img {
     width: 64px;
     bottom: 1rem;
     right: 1rem;
-    z-index: 190;
     text-align: center;
+    z-index: 90000000;
 }
 
 .floating-sticky .menu-list {

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <a href="#" class="btn-floating" id="to_open"><span></span></a>
                 <ul>
                     <li class="menu01"><a href="#">Video llamada con Amigo Samsung</a></li>
-                    <li class="menu02"><a href="#" id="cliengoWidgetOpen">Soporte por Live Chat</a></li>
+                    <li class="menu02"><a><iframe src="https://lw.cliengo.com/button" id="liveChatCliengo" style="width:100%"></iframe></a></li>
                     <li class="menu03"><a href="https://api.whatsapp.com/send?phone=50760082665" target="_blank">Soporte por Whatsapp</a></li>
                 </ul>
             </div>
@@ -16,14 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     document.body.appendChild(template);
     document.getElementById("to_open").addEventListener("click", floating_open);
-    document.getElementById("cliengoWidgetOpen").addEventListener("click", cliengoWidgetOpen);
-
-    function cliengoWidgetOpen() {
-        Cliengo.widgetClose();
-    }
 
     function floating_open() {
         var element = document.getElementById("floating_open");
+        document.getElementById("liveChatCliengo").style.display = 'block';
         element.classList.toggle("on");
     }
 });
