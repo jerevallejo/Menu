@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <a href="#" class="btn-floating" id="to_open"><span></span></a>
                 <ul>
                     <li class="menu01"><a href="#">Video llamada con Amigo Samsung</a></li>
-                    <li class="menu02"><a><iframe src="https://lw.cliengo.com/button" id="liveChatCliengo" style="width:100%"></iframe></a></li>
+                    <iframe src="https://lw.cliengo.com/button" id="liveChatCliengo" style="width:100%"></iframe>
                     <li class="menu03"><a href="https://api.whatsapp.com/send?phone=50760082665" target="_blank">Soporte por Whatsapp</a></li>
                 </ul>
             </div>
